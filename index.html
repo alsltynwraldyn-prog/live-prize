@@ -2,51 +2,35 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="صفحة تجريبية لعرض خطوات طلب مكافأة.">
-<title>LIVE PRIZE — فرصة مكافأة 20$</title><link rel="stylesheet" href="styles.css">
+<title>LIVE PRIZE — المفاجأة</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="top"><div class="brand"><span class="gem">◆</span> LIVE PRIZE</div><span class="tag">برنامج المكافآت</span></header>
+<header class="top"><div class="brand"><span class="gem">◆</span> LIVE PRIZE</div><span class="tag">تجربة ترفيهية</span></header>
 <main>
 <section class="hero">
-<div class="eyebrow">فرصة مشاركة • مكافأة 20 دولاراً</div>
-<h1>⚡ توقّف لحظة…<br>قد تكون هذه فرصتك!</h1>
-<p class="lead">أكمل خطوات المشاركة المعلنة وادعُ 10 أشخاص للانضمام. راجع الشروط قبل إدخال بياناتك.</p>
-<div class="reward"><small>قيمة المكافأة المعلنة</small><strong>$20</strong><small>تُصرف فقط عند توافر التمويل واستيفاء الشروط والتحقق منها.</small></div>
+<div class="eyebrow">دعوة خاصة للأصدقاء</div>
+<h1>⚡ عندك مفاجأة بانتظارك!</h1>
+<p class="lead">اختار محفظتك المفضلة وشوف شو محضّرين إلك.</p>
+<div class="reward"><small>المفاجأة</small><strong>🎁</strong><small>اضغط واكتشف التفاصيل</small></div>
 </section>
 <section class="panel">
-<h2>تقدّم الدعوات</h2><div class="numbers"><strong id="count">0 / 10</strong><span>دعوات مؤكدة</span></div>
-<div class="track"><div id="bar"></div></div>
-<p class="hint" id="progress-note">سيظهر التقدم بعد ربط النظام بخدمة تحقق فعلية من الدعوات. مشاركة الرابط وحدها لا تثبت وصوله أو قبول الدعوة.</p>
-<button class="primary" id="share" type="button">مشاركة رابط الدعوة</button>
-<p id="share-status" class="status" aria-live="polite"></p>
-</section>
-<section class="panel">
-<h2>كيف تعمل المشاركة؟</h2>
-<ol><li>انسخ رابط الدعوة وشاركه مع من يرغب بالمشاركة.</li><li>تُحتسب الدعوة بعد تحققها وفق الشروط المنشورة.</li><li>بعد اكتمال التحقق، يمكنك تقديم طلب المكافأة إن كانت متاحة وممولة.</li></ol>
-</section>
-<section class="panel">
-<h2>طريقة استلام المكافأة</h2>
-<p class="hint">اختر المحفظة لعرض معاينة نموذج بيانات الاستلام. هذه النسخة لا ترسل البيانات ولا تحفظها ولا تنفّذ أي تحويل.</p>
-<label for="payout-method">طريقة سحب المكافأة</label>
-<select id="payout-method" name="payout" class="payout-select">
+<h2>اختيار المحفظة</h2>
+<p class="hint">اختيار ترفيهي فقط — لا نطلب أي بيانات شخصية أو مالية.</p>
+<label for="payout-method">اختر طريقة سحب المكافأة</label>
+<select id="payout-method" class="payout-select">
 <option value="" selected disabled>اختر طريقة سحب المكافأة</option>
-<option value="orange-money">Orange Money</option>
-<option value="zain-cash">Zain Cash</option>
-<option value="uwallet">UWallet</option>
+<option value="Orange Money">Orange Money</option>
+<option value="Zain Cash">Zain Cash</option>
+<option value="UWallet">UWallet</option>
 </select>
-<div id="payout-details" class="payout-details" hidden>
-<h3>بيانات صاحب المحفظة</h3>
-<label for="wallet-owner">اسم صاحب المحفظة</label>
-<input id="wallet-owner" type="text" autocomplete="off" placeholder="كما هو مسجل لدى مزود المحفظة">
-<label for="wallet-number">رقم المحفظة</label>
-<input id="wallet-number" type="tel" inputmode="numeric" autocomplete="off" placeholder="أدخل رقم المحفظة">
-<div class="secure-note"><strong>تأكيد بيانات المحفظة</strong><p>يرجى إدخال بيانات صاحب المحفظة بشكل صحيح لضمان معالجة طلب الاستلام. وقد يُطلب استكمال التحقق من الهوية عبر مزود المحفظة الرسمي عند الحاجة. هذه معاينة تجريبية؛ التحقق الرسمي غير مفعّل حالياً، ولا تُرسل البيانات أو تُحفظ.</p></div>
-<button class="primary" id="verify-provider" type="button">متابعة إلى التحقق الرسمي</button>
-<p id="verification-status" class="status" aria-live="polite">التحقق الرسمي غير مربوط في النسخة التجريبية.</p>
+<button class="primary" id="reveal" type="button" disabled>اكشف المفاجأة</button>
+<div id="reveal-box" class="secure-note" hidden aria-live="polite">
+<h2>🤣 انكشف المقلب!</h2>
+<p>مبروك! ربحتوا عشا… بس الفاتورة على حسابكم 😂🍕</p>
+<p>ولا طلبنا بياناتكم ولا قربنا على محافظكم. صحتين!</p>
 </div>
 </section>
-<section class="terms"><h2>الشروط والشفافية</h2><p>هذه الصفحة نموذج تجريبي وليست إعلاناً عن استحقاق مؤكد أو دفع مضمون. لا توجد آلية تحقق من الدعوات أو معالجة مطالبات أو دفع مفعّلة حالياً. قبل الإطلاق، يجب نشر شروط الأهلية، وآلية التحقق، والجهة المسؤولة، ومصدر تمويل المكافآت، وسياسة الخصوصية. لا تطلب كلمات مرور أو بيانات بطاقات أو رموز تحقق.</p></section>
-</main><footer>LIVE PRIZE • معلومات المشاركة والشروط</footer>
+</main>
+<footer>LIVE PRIZE • تجربة مزاح بين الأصدقاء</footer>
 <script src="app.js"></script>
 </body></html>
