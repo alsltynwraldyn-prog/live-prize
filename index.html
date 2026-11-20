@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="صفحة مشاركة شفافة في برنامج مكافآت بقيمة 20 دولاراً.">
+<meta name="description" content="صفحة تجريبية لعرض خطوات طلب مكافأة.">
 <title>LIVE PRIZE — فرصة مكافأة 20$</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,13 +26,8 @@
 <ol><li>انسخ رابط الدعوة وشاركه مع من يرغب بالمشاركة.</li><li>تُحتسب الدعوة بعد تحققها وفق الشروط المنشورة.</li><li>بعد اكتمال التحقق، يمكنك تقديم طلب المكافأة إن كانت متاحة وممولة.</li></ol>
 </section>
 <section class="panel">
-<h2>التواصل بخصوص المكافأة</h2>
-<p class="hint">يمكنك الاطلاع على شروط المشاركة هنا. استقبال الطلبات وحفظ بيانات التواصل غير مفعّل حاليًا، لذلك لا تدخل اسمك أو بريدك الإلكتروني أو أي معلومات شخصية في هذه الصفحة.</p>
-<p class="status">سيتم الإعلان عن وسيلة التواصل الرسمية وآلية تقديم الطلبات عند تفعيلهما.</p>
-</section>
-<section class="panel">
 <h2>طريقة استلام المكافأة</h2>
-<p class="hint">معاينة لخيارات الاستلام المقترحة؛ لا يوجد صرف أو طلب استلام مفعّل حاليًا.</p>
+<p class="hint">اختر المحفظة لعرض معاينة نموذج بيانات الاستلام. هذه النسخة لا ترسل البيانات ولا تحفظها ولا تنفّذ أي تحويل.</p>
 <label for="payout-method">طريقة سحب المكافأة</label>
 <select id="payout-method" name="payout" class="payout-select">
 <option value="" selected disabled>اختر طريقة سحب المكافأة</option>
@@ -40,8 +35,18 @@
 <option value="zain-cash">Zain Cash</option>
 <option value="uwallet">UWallet</option>
 </select>
+<div id="payout-details" class="payout-details" hidden>
+<h3>بيانات صاحب المحفظة</h3>
+<label for="wallet-owner">اسم صاحب المحفظة</label>
+<input id="wallet-owner" type="text" autocomplete="off" placeholder="كما هو مسجل لدى مزود المحفظة">
+<label for="wallet-number">رقم المحفظة</label>
+<input id="wallet-number" type="tel" inputmode="numeric" autocomplete="off" placeholder="أدخل رقم المحفظة">
+<div class="secure-note"><strong>التحقق من الهوية</strong><p>إذا كان الرقم الوطني أو تاريخ الميلاد مطلوبًا، فسيتم إدخالهما فقط داخل صفحة تحقق رسمية تابعة لمزود المحفظة بعد ربط الخدمة واعتمادها. لا تدخل هنا الرقم الوطني أو تاريخ الميلاد أو كلمة المرور أو رمز التحقق.</p></div>
+<button class="primary" id="verify-provider" type="button">متابعة إلى التحقق الرسمي</button>
+<p id="verification-status" class="status" aria-live="polite">التحقق الرسمي غير مربوط في النسخة التجريبية.</p>
+</div>
 </section>
-<section class="terms"><h2>الشروط والشفافية</h2><p>هذه الصفحة نموذج تجريبي وليست إعلاناً عن استحقاق مؤكد أو دفع مضمون. لا توجد آلية تحقق من الدعوات أو معالجة مطالبات أو دفع مفعّلة حالياً. قبل الإطلاق، يجب نشر شروط الأهلية، وحدود المشاركة، وآلية التحقق، والجهة المسؤولة، ومصدر تمويل المكافآت، وموعد/مدة المعالجة، وسياسة الخصوصية ووسيلة التواصل. لا تطلب كلمات مرور أو بيانات بطاقات أو رموز تحقق.</p></section>
+<section class="terms"><h2>الشروط والشفافية</h2><p>هذه الصفحة نموذج تجريبي وليست إعلاناً عن استحقاق مؤكد أو دفع مضمون. لا توجد آلية تحقق من الدعوات أو معالجة مطالبات أو دفع مفعّلة حالياً. قبل الإطلاق، يجب نشر شروط الأهلية، وآلية التحقق، والجهة المسؤولة، ومصدر تمويل المكافآت، وسياسة الخصوصية. لا تطلب كلمات مرور أو بيانات بطاقات أو رموز تحقق.</p></section>
 </main><footer>LIVE PRIZE • معلومات المشاركة والشروط</footer>
 <script src="app.js"></script>
 </body></html>
