@@ -1,36 +1,54 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LIVE PRIZE — المفاجأة</title><link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>بوابة المكافآت | تجربة تفاعلية</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="top"><div class="brand"><span class="gem">◆</span> LIVE PRIZE</div><span class="tag">تجربة ترفيهية</span></header>
+<header class="top">
+  <a class="brand" href="#" aria-label="الرئيسية"><span class="brand-mark">✦</span><span>بوابة المكافآت</span></a>
+  <span class="secure"><span class="secure-dot"></span> واجهة تجريبية</span>
+</header>
 <main>
-<section class="hero">
-<div class="eyebrow">دعوة خاصة للأصدقاء</div>
-<h1>⚡ عندك مفاجأة بانتظارك!</h1>
-<p class="lead">اختار محفظتك المفضلة وشوف شو محضّرين إلك.</p>
-<div class="reward"><small>المفاجأة</small><strong>🎁</strong><small>اضغط واكتشف التفاصيل</small></div>
-</section>
-<section class="panel">
-<h2>اختيار المحفظة</h2>
-<p class="hint">اختيار ترفيهي فقط — لا نطلب أي بيانات شخصية أو مالية.</p>
-<label for="payout-method">اختر طريقة سحب المكافأة</label>
-<select id="payout-method" class="payout-select">
-<option value="" selected disabled>اختر طريقة سحب المكافأة</option>
-<option value="Orange Money">Orange Money</option>
-<option value="Zain Cash">Zain Cash</option>
-<option value="UWallet">UWallet</option>
-</select>
-<button class="primary" id="reveal" type="button" disabled>اكشف المفاجأة</button>
-<div id="reveal-box" class="secure-note" hidden aria-live="polite">
-<h2>🤣 انكشف المقلب!</h2>
-<p>مبروك! ربحتوا عشا… بس الفاتورة على حسابكم 😂🍕</p>
-<p>ولا طلبنا بياناتكم ولا قربنا على محافظكم. صحتين!</p>
-</div>
-</section>
+  <section class="hero">
+    <div class="eyebrow">مركز المكافآت</div>
+    <h1>اختر وسيلة الاستلام</h1>
+    <p class="lead">حدد المحفظة التي تفضل استخدامها لمتابعة خطوات التجربة.</p>
+    <div class="hero-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="gift">✦</div></div>
+  </section>
+
+  <section class="panel" aria-labelledby="methods-title">
+    <div class="panel-heading"><div><span class="step">الخطوة 01</span><h2 id="methods-title">وسيلة الاستلام</h2></div><span class="step-count">1 / 2</span></div>
+    <p class="hint">اختر محفظة إلكترونية للانتقال إلى المعاينة.</p>
+    <div class="methods" role="radiogroup" aria-label="المحافظ الإلكترونية">
+      <button class="method" type="button" role="radio" aria-checked="false" data-method="Orange Money">
+        <span class="method-logo orange">O</span><span class="method-copy"><strong>Orange Money</strong><small>أورنج موني</small></span><span class="radio"></span>
+      </button>
+      <button class="method" type="button" role="radio" aria-checked="false" data-method="Zain Cash">
+        <span class="method-logo zain">Z</span><span class="method-copy"><strong>Zain Cash</strong><small>زين كاش</small></span><span class="radio"></span>
+      </button>
+      <button class="method" type="button" role="radio" aria-checked="false" data-method="UWallet">
+        <span class="method-logo uwallet">U</span><span class="method-copy"><strong>UWallet</strong><small>أمنية</small></span><span class="radio"></span>
+      </button>
+      <button class="method" type="button" role="radio" aria-checked="false" data-method="محفظة أخرى">
+        <span class="method-logo other">＋</span><span class="method-copy"><strong>محفظة أخرى</strong><small>وسيلة مختلفة</small></span><span class="radio"></span>
+      </button>
+    </div>
+    <button class="primary" id="continue" type="button" disabled>متابعة <span aria-hidden="true">←</span></button>
+    <div id="result" class="result" role="status" aria-live="polite" hidden>
+      <span class="result-icon">✓</span><div><strong>تم اختيار وسيلة الاستلام</strong><p id="result-text"></p></div>
+    </div>
+  </section>
+
+  <section class="notice">
+    <span class="notice-icon">i</span>
+    <div><strong>تنويه مهم</strong><p>هذه واجهة محاكاة للتصميم فقط، وليست جهة مانحة أو بوابة دفع. لا تدخل رقم هاتفك أو بيانات محفظتك أو أي رمز تحقق هنا. لا توجد عملية صرف أو تحقق مالي حقيقي.</p></div>
+  </section>
 </main>
-<footer>LIVE PRIZE • تجربة مزاح بين الأصدقاء</footer>
+<footer><span>بوابة المكافآت</span><span>تجربة تفاعلية غير مالية</span></footer>
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>
